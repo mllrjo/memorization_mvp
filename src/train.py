@@ -216,8 +216,8 @@ def run_mvp_training():
                         test_inputs_batch, test_targets_batch = test_inputs_batch.to(device), test_targets_batch.to(device)
                         test_predicted_logits = model(test_inputs_batch)
                         test_predicted_bits = torch.argmax(test_predicted_logits, dim=-1)
-                        correct_predictions_ood += (test_predicted_bits == test_targets_batch).sum().item()
-                        total_predictions_ood += test_targets_batch.numel()
+                        test_correct_predictions += (test_predicted_bits == test_targets_batch).sum().item()
+                        test_total_predictions += test_targets_batch.numel()
                     generalization_accuracy = (test_correct_predictions / test_total_predictions) * 100 if test_total_predictions > 0 else 0
 
                 # Log results to console and file

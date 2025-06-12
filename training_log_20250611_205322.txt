@@ -1,0 +1,13 @@
+Training Log - 20250611_205322
+Parameters:
+  Sequence Length: 32
+  Correlation Strength Param: 8
+  Train Dataset Size: 1000
+  Test Dataset Size: 100
+  Model: 4 layers, d_model=512, nhead=8
+  Training Steps: 100000
+  Batch Size: 32
+  Learning Rate: 0.0001
+Theoretical True Per-Bit Entropy (Lower Bound NLL): 0.6616
+
+Step,Model_NLL,Memorization_Accuracy(Train),Generalization_Accuracy(Test)
