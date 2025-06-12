@@ -15,8 +15,8 @@ from src.model import BareBonesTransformer
 
 # --- MVP Parameters ---
 MVP_SEQUENCE_LENGTH = 32
-MVP_CORRELATION_STRENGTH_PARAM = 8 # This is the correlation length
-MVP_NUM_SEQUENCES_TRAIN = 1000 # Reverted to 1000 as per discussion, adjust for your scale
+MVP_CORRELATION_STRENGTH_PARAM = 16 # This is the correlation length
+MVP_NUM_SEQUENCES_TRAIN = 100 # Reverted to 1000 as per discussion, adjust for your scale
 MVP_NUM_SEQUENCES_TEST = 100   # Test set size
 
 MVP_VOCAB_SIZE = 2 # Binary (0 or 1)
@@ -127,7 +127,7 @@ def run_mvp_training():
     # --- Checkpoint Loading Logic ---
     CHECKPOINT_BASE_PATH = "/content/drive/My Drive/memorization_mvp_checkpoints/" # Path for Colab/Drive
     # If running on local machine, you might want to adjust this path
-    # CHECKPOINT_BASE_PATH = "./checkpoints/" 
+    CHECKPOINT_BASE_PATH = "./checkpoints/" 
     
     start_step = 0
     
